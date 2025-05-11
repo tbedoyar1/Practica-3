@@ -1,22 +1,35 @@
 #include <stdio.h>
 
+/**
+ * Modifies two integers through pointers while maintaining a mathematical invariant
+ * 
+ * @param i Pointer to first integer (will be increased by 2)
+ * @param j Pointer to second integer (will be increased by 3)
+ * 
+ * @pre *i * *j + 2 * *j + 3 * *i == 0
+ * @post If precondition was met, *i * *j == 6 after execution
+ */
 void ejercicio5(int *i, int *j) {
     *j = *j + 3;
     *i = *i + 2;
 }
 
+/**
+ * Demonstrates the ejercicio5 function with valid input values
+ * 
+ * @return Exit status (0 for success)
+ */
 int main() {
-  
     int a = 1;
     int b = -1;
 
-    printf("Valores iniciales: a = %d, b = %d\n", a, b);
-    printf("Comprobación precondición: %d\n", a*b + 2*b + 3*a); 
+    printf("Initial values: a = %d, b = %d\n", a, b);
+    printf("Precondition check: %d\n", a*b + 2*b + 3*a);
 
-    ejercicio5(&a, &b); 
+    ejercicio5(&a, &b);
 
-    printf("Valores finales: a = %d, b = %d\n", a, b);
-    printf("a * b = %d (debería ser 6)\n", a * b); 
+    printf("Final values: a = %d, b = %d\n", a, b);
+    printf("a * b = %d (expected: 6)\n", a * b);
 
     return 0;
 }
