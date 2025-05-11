@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void ejercicio5(int *i, int *j) {
+    *j = *j + 3;
+    *i = *i + 2;
+}
+
+int main() {
+  
+    int a = 1;
+    int b = -1;
+
+    printf("Valores iniciales: a = %d, b = %d\n", a, b);
+    printf("Comprobación precondición: %d\n", a*b + 2*b + 3*a); 
+
+    ejercicio5(&a, &b); 
+
+    printf("Valores finales: a = %d, b = %d\n", a, b);
+    printf("a * b = %d (debería ser 6)\n", a * b); 
+
+    return 0;
+}
