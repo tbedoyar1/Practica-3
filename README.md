@@ -45,12 +45,12 @@ int main() {
     int b = -1;
 
     printf("Valores iniciales: a = %d, b = %d\n", a, b);
-    printf("Comprobación precondición: %d\n", a*b + 2*b + 3*a); // Debe ser 0
+    printf("Comprobación precondición: %d\n", a*b + 2*b + 3*a); 
 
-    ejercicio5(&a, &b); // Llamamos a la función
+    ejercicio5(&a, &b); 
 
     printf("Valores finales: a = %d, b = %d\n", a, b);
-    printf("a * b = %d (debería ser 6)\n", a * b); // Postcondición: a*b debe ser 6
+    printf("a * b = %d (debería ser 6)\n", a * b); 
 
     return 0;
 }
